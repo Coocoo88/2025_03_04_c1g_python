@@ -1,11 +1,15 @@
+import os
 import sqlite3
 from pathlib import Path
 
+BASE_PATH = Path(__file__).parent
+print('hallo', BASE_PATH)
 
 def execute_query_and_print_result(sql):
+    print(__file__)
 
-    BASE_PATH = Path(__file__).parent
     DB_PATH = BASE_PATH / "data/2025_03_03_Material_und_Gehalt_angereichert.db"
+    # hä?
 
     connection = None
 
@@ -21,7 +25,8 @@ def execute_query_and_print_result(sql):
 
 
 def uebung_1():
-    sql = "SELECT id, seriennummer, kaufdatum FROM Material WHERE typ = 'Laptop'"
+    # sql = "SELECT id, seriennummer, kaufdatum FROM Material WHERE typ = 'Laptop'"
+    sql = "SELECT ID, Seriennummer, Kaufdatum FROM Material Where typ ='Laptop'"
     execute_query_and_print_result(sql)
 
 def uebung_2():
@@ -52,10 +57,10 @@ def uebung_5():
                 ORDER BY cnt ASC, typ ASC"""
     execute_query_and_print_result(sql)
 
-if __name__ == "__main__":
+if __name__ == "__main__": #wird datei direkt aufgerufen, check
     uebung_1()
     uebung_2()
     uebung_3()
     uebung_4()
-    uebung_5()
+    # uebung_5()
 
