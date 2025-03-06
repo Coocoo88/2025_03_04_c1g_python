@@ -58,9 +58,9 @@ def uebung_5():
     execute_query_and_print_result(sql)
 
 if __name__ == "__main__": #wird datei direkt aufgerufen, check
-    uebung_1()
-    uebung_2()
-    uebung_3()
-    uebung_4()
-    # uebung_5()
+    # uebung_1()
+    # uebung_2()
+    # uebung_3()
+    # uebung_4()
+    uebung_5()
 
